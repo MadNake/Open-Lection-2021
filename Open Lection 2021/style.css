@@ -511,3 +511,15 @@ a {
 .main_footer img {
   margin-bottom: 23px;
 }
+
+.animation-watch {
+  animation-name: ani;
+  animation-duration: 0.9s;
+}
+
+@keyframes ani {
+
+  50% {transform: rotateY(180deg);}
+
+  100% {transform: rotateY(360deg);}
+}
