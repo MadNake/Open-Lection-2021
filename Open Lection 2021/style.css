@@ -41,15 +41,14 @@ a {
 .page-header {
   display: flex;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-around;
+
 }
 
 .main-logo {
   width: 103.68px;
   height: 26px;
-  margin-left: 97px;
   margin-top: 31px;
-  margin-right: 266.32px;
   margin-bottom: 28px;
 }
 
@@ -65,17 +64,16 @@ a {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
+
 
 .user-nav__list {
   padding: 0;
-  margin-left: 278px;
   margin-top: 35px;
-  margin-right: 100px;
   list-style: none;
   display: flex;
-  width: 99px;
-  height: 21px;
+  gap: 20px;
   justify-content: space-between;
 }
 
