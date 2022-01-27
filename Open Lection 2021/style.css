@@ -224,7 +224,7 @@ a {
   top: 8px;
 }
 
-.pop-models-prev {
+.pop-models__prev {
   font-family: "Playfair Display", "serif";
   font-size: 32px;
   font-weight: 400;
@@ -233,7 +233,7 @@ a {
   text-align: center;
 }
 
-.look-all__link {
+.look-all-link {
 
   font-family: "Roboto", serif;
   font-size: 16px;
@@ -246,7 +246,7 @@ a {
   position: relative;
 }
 
-.look-all__link::after {
+.look-all-link::after {
   content: "";
   position: absolute;
   border: 1px solid #C4C0B6;
