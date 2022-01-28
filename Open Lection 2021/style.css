@@ -7,7 +7,6 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-  margin-right:
 }
 
 /*
@@ -106,10 +105,7 @@ a {
 }
 
 
-
-
-
-.clock-descriptions p {
+.clock-descriptions__how-to-get {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -125,7 +121,7 @@ a {
 
 
 
-.preview__main h2 {
+.clock-descriptions__collect {
   margin: 0;
   margin-bottom: 16px;
   font-family: "Playfair Display", serif;
@@ -137,7 +133,7 @@ a {
   text-align: left;
 }
 
-.preview__main p {
+.clock-descriptions__main p {
   font-family: "Playfair Display", serif;
   font-size: 30px;
   font-style: normal;
@@ -150,8 +146,6 @@ a {
 }
 
 .button {
-  width: 129px;
-  height: 11px;
   padding: 26.5px 38px;
   display: inline-block;
   background-color: #444240;
@@ -167,11 +161,16 @@ a {
   text-transform: uppercase;
 }
 
+.button:hover {
+  opacity: 75%;
+}
+
 .clock-descriptions {
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .clock-preview {
@@ -192,10 +191,10 @@ a {
   color: #1B1A17;
 }
 
-.clock-preview__price::after {
+.clock-preview__price::after,
+.clock-preview__size::after {
   position: absolute;
   content: "";
-  position: absolute;
   width: 50px;
   height: 0px;
   border: 0.1px solid #8B8371;
@@ -215,13 +214,7 @@ a {
 }
 
 .clock-preview__size::after {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 0px;
-  border: 0.1px solid #8B8371;
   left: -65px;
-  top: 8px;
 }
 
 .pop-models__prev {
@@ -242,6 +235,9 @@ a {
   letter-spacing: 0em;
   display: block;
   text-align: right;
+}
+
+.pop-models__link {
   margin-right: 98px;
   position: relative;
 }
@@ -256,28 +252,31 @@ a {
   right: 0;
 }
 
-.pop-models__list {
+.pop-models__product-list {
+  margin-bottom: 86px;
+}
+
+.product-list {
   display: flex;
   justify-content: space-between;
   padding: 0px;
   margin: 0;
-  margin-bottom: 86px;
 }
 
-.pop-models__pop-watch img {
+.product-list__img {
   background: url("img/Ellipse-mini.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.pop-models__item-watches {
+.product-list__item-watches {
   list-style: none;
   width: 370px;
   height: 467px;
   background: #FDFDFB;
 }
 
-.pop-models__item-watches a {
+.product-list__more {
   font-family: "Playfair Display", serif;
   font-size: 16px;
   font-style: normal;
@@ -290,7 +289,7 @@ a {
   margin-top: 19px;
 }
 
-.pop-models__item-watches a::before {
+.product-list__more::before {
   content: "";
   position: absolute;
   width: 30px;
@@ -300,12 +299,12 @@ a {
   left: -48px;
 }
 
-.pop-models__name-and-price {
+.product-list__name-and-price {
   margin-left: 40px;
 
 }
 
-.pop-models__name-and-price h2 {
+.product-list__name {
   margin: 0;
   font-family: "Playfair Display", serif;
   font-size: 14px;
@@ -316,7 +315,7 @@ a {
   margin-bottom: 10px;
 }
 
-.pop-models__name-and-price span {
+.product-list__price {
   margin: 0;
   font-family: "Prata", serif;
   font-size: 12px;
@@ -326,12 +325,12 @@ a {
   letter-spacing: 0em;
 }
 
-.pop-models__pop-watch {
+.product-list__pop-watch {
   display: flex;
   flex-direction: column;
 }
 
-.descriptions_content {
+.descriptions__content {
   display: flex;
   flex-flow: row;
 
@@ -347,16 +346,15 @@ a {
   background: left / 468px 100% no-repeat url("img/background_banner_1.jpg");
 }
 
-.descriptions__left img {
+.descriptions__img {
   margin-left: 177px;
   margin-top: 52px;
   margin-bottom: 52px;
   margin-right: 70px;
 }
 
-.descriptions__right p {
+.descriptions__descriptions-watchs {
   width: 376px;
-  height: 63px;
   font-family: "Roboto", serif;
   font-size: 16px;
   font-style: normal;
@@ -367,7 +365,7 @@ a {
   margin-bottom: 45px;
 }
 
-.descriptions__right h3 {
+.descriptions__title {
   font-family: "Playfair Display", serif;
   font-size: 32px;
   font-style: normal;
@@ -381,32 +379,29 @@ a {
 
 .descriptions__right .button {
   background-color: rgba(212, 176, 152, 1);
-  font-family: "Roboto" serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  text-align: left;
 }
 
-.descriptions_slider-control button {
+.slider-control__button-prev,
+.slider-control__button-next  {
   border: none;
   background-color: inherit;
   cursor: pointer;
 }
 
-.descriptions_slider-control {
+.slider-control {
   position: absolute;
   display: block;
   width: 63px;
   height: 12px;
   margin: 0;
+}
+
+.descriptions__slider-control {
   left: 552px;
   bottom: 21px;
 }
 
-.social_preview {
+.social__preview {
   padding: 0;
   list-style: none;
   display: flex;
@@ -416,19 +411,19 @@ a {
 }
 
 
-.social_preview li {
+.social__preview li {
   width: 242px;
   height: 228px;
 
 }
 
-.social_preview .third{
+.social__preview .third{
   width: 377px;
   height: 460px;
   margin-left: 10px;
 }
 
-.social_preview .first {
+.social__preview .first {
   margin-bottom: 10px;
 }
 
@@ -463,11 +458,15 @@ a {
   margin-bottom: 119px;
 }
 
-.social_link-icons {
+.link-icons {
   display: flex;
   width: 95px;
   height: 24px;
   justify-content: space-between;
+}
+
+.link-icons__item:hover {
+  cursor: pointer;
 }
 
 .social {
@@ -479,7 +478,7 @@ a {
   margin-bottom: 90px;
 }
 
-.main_footer {
+.main-footer {
   background-color: #444240;
   color: rgba(255, 255, 255, 0.75);
   display: flex;
@@ -488,14 +487,14 @@ a {
   align-items: center;
 }
 
-.main_footer ul {
+.main-footer ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.main_footer a,
-.main_footer p {
+.main-footer a,
+.main-footer p {
   font-family: "Roboto", serif;
   font-style: normal;
   font-weight: normal;
@@ -507,7 +506,7 @@ a {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.main_footer h3 {
+.main-footer h3 {
   margin: 0;
   margin-bottom: 33px;
   font-family: "Roboto", serif;
@@ -522,7 +521,7 @@ a {
 
 }
 
-.main_footer img {
+.main-footer img {
   margin-bottom: 23px;
 }
 
