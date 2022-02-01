@@ -424,7 +424,7 @@ a {
   grid-template-columns: 240px 377px;
   grid-template-rows: 222px 222px;
   */
-  grid-template:222px 222px / 240px 377px;
+  grid-template:222px 222px / 242px 377px;
   gap: 10px;
 }
 
